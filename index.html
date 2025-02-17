@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- StAuth10244: Suhayb Dahir, StAuth10244 certify that this material is my original work. No other person's work has been used without due acknowledgement. -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamilton Explorer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <h1 class="text-center mb-4">Explore Hamilton</h1>
+        
+        <div class="row g-3">
+            <!-- Controls Column -->
+            <div class="col-lg-4">
+                <div class="card shadow-sm mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Filters</h5>
+                        <div class="d-grid gap-2 mb-4">
+                            <button onclick="filterMarkers('all')" class="btn btn-primary">All Locations</button>
+                            <button onclick="filterMarkers('park')" class="btn btn-outline-primary">Parks</button>
+                            <button onclick="filterMarkers('museum')" class="btn btn-outline-primary">Museums</button>
+                            <button onclick="filterMarkers('shopping')" class="btn btn-outline-primary">Shopping</button>
+                        </div>
+
+                        <h5 class="card-title">My Location</h5>
+                        <button id="geoButton" class="btn btn-info mb-4 w-100">📍 Find Me</button>
+
+                        <h5 class="card-title">Add Location</h5>
+                        <div class="mb-3">
+                            <input type="text" id="locationName" class="form-control" placeholder="Location Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" id="address" class="form-control" placeholder="Address" required>
+                        </div>
+                        <div class="mb-3">
+                            <select id="category" class="form-select" required>
+                                <option value="">Select Category</option>
+                                <option value="park">Park</option>
+                                <option value="museum">Museum</option>
+                                <option value="shopping">Shopping</option>
+                                <option value="landmark">Landmark</option>
+                            </select>
+                        </div>
+                        <button id="addMarkerButton" class="btn btn-success w-100">➕ Add Marker</button>
+                    </div>
+                </div>
+
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Directions</h5>
+                        <select id="destinations" class="form-select mb-3">
+                            <option value="">Select Destination</option>
+                        </select>
+                        <button id="getDirections" class="btn btn-warning w-100">🛣️ Get Directions</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map Column -->
+            <div class="col-lg-8">
+                <div id="map"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Google Maps API (Optimized) -->
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDR8GVu5ihBlz7wDXl_VAGzp_G3bOBY21A&callback=initMap" defer></script>
+    <script src="app.js"></script>
+</body>
+</html>

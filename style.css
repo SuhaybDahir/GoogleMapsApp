@@ -1,0 +1,46 @@
+/* Map Styling */
+#map {
+    height: 70vh;
+    border-radius: 10px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 992px) {
+    #map {
+        height: 50vh;
+        margin-top: 1rem;
+    }
+    
+    .card {
+        margin-bottom: 1rem !important;
+    }
+    
+    .btn {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+    }
+    
+    .d-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* InfoWindow Styling */
+.gm-style-iw {
+    padding: 1rem !important;
+    border-radius: 10px !important;
+}
+
+.info-window h5 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.info-window p {
+    margin: 0.2rem 0;
+}
+
+.form-control:focus, .form-select:focus {
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
