@@ -1,46 +1,101 @@
-/* Map Styling */
+/* 🔹 General Page Styling */
+body {
+    background: linear-gradient(to right, #2c3e50, #4ca1af);
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+/* 🔹 Heading */
+h1 {
+    font-weight: 600;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+}
+
+/* 🔹 Map Styling */
 #map {
-    height: 70vh;
+    height: 75vh;
+    width: 100%;
     border-radius: 10px;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
-/* Mobile Responsiveness */
-@media (max-width: 992px) {
+/* 🔹 Bootstrap Cards */
+.card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    box-shadow: 0px 6px 15px rgba(0,0,0,0.2);
+    color: white;
+    padding: 15px;
+}
+
+/* 🔹 Form Inputs */
+.form-control, .form-select {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* 🔹 Buttons */
+.btn {
+    font-weight: 600;
+    border: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* 🔹 Primary Buttons */
+.btn-primary {
+    background: linear-gradient(135deg, #1e90ff, #007bff);
+    color: white;
+}
+
+/* 🔹 Success Buttons */
+.btn-success {
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+    color: white;
+}
+
+/* 🔹 Info Buttons */
+.btn-info {
+    background: linear-gradient(135deg, #17a2b8, #138496);
+    color: white;
+}
+
+/* 🔹 Warning Buttons */
+.btn-warning {
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+    color: white;
+}
+
+/* 🔹 Dark Buttons */
+.btn-dark {
+    background: linear-gradient(135deg, #2c3e50, #1c2833);
+    color: white;
+}
+
+/* 🔹 Responsive Layout */
+@media (max-width: 768px) {
     #map {
-        height: 50vh;
-        margin-top: 1rem;
+        height: 55vh;
     }
-    
+
     .card {
-        margin-bottom: 1rem !important;
+        margin-bottom: 15px;
     }
-    
+
     .btn {
-        font-size: 0.9rem;
-        padding: 0.5rem 1rem;
+        width: 100%;
+        margin-bottom: 10px;
     }
-    
-    .d-grid {
-        grid-template-columns: 1fr !important;
-    }
-}
-
-/* InfoWindow Styling */
-.gm-style-iw {
-    padding: 1rem !important;
-    border-radius: 10px !important;
-}
-
-.info-window h5 {
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
-}
-
-.info-window p {
-    margin: 0.2rem 0;
-}
-
-.form-control:focus, .form-select:focus {
-    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
